@@ -32,7 +32,7 @@ body{
     top: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 75vw;
     font-size: 25px;
     background-color: rgba(0,0,0,0.5);
     border: 2px solid white;
@@ -42,6 +42,7 @@ body{
 
 }
 #nav:hover{
+    scale: 105%;
     background-color: #555555;
     box-shadow: 0px 0px 10px white;
     transition: 1s;
@@ -50,9 +51,14 @@ body{
 a:link{
     color: white;
     text-decoration: none;
+    transition: 1s;
 }
 
 a:visited{
     color: grey;
+    transition: 1s;
 }
 
+a:hover{
+    color: white;
+}
