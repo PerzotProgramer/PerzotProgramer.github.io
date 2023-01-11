@@ -6,6 +6,7 @@ body{
     background-color: black;
     text-align: center;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    overflow-x: hidden;
 }
 
 #BGvideo{
@@ -37,6 +38,7 @@ body{
     border: 2px solid white;
     border-radius: 10px;
     transition: 1s;
+    z-index: 1;
 
 }
 #nav:hover{
@@ -47,6 +49,7 @@ body{
 
 a:link{
     color: white;
+    text-decoration: none;
 }
 
 a:visited{
