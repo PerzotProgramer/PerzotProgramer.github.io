@@ -12,17 +12,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 200px;
 }
 
 .box{
     background-color: rgba(0,0,0,0.5);
-    width: 30vw;
+    width: 25vw;
+    height: 25vw;
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
     margin: 30px;
-    padding: 10px;
+    padding: 5px;
     transition: 1s;
 }
 
@@ -36,16 +36,11 @@
 }
 
 .box>img{
-    width: 25vw;
+    height: 20vh;
+    max-width: 20vw;
     margin-left: auto;
     margin-right: auto;
     transition: 1s;
-}
-
-.date{
-    font-size: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 .link:visited{
