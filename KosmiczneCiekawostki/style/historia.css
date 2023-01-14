@@ -58,6 +58,30 @@
     animation: rainbow 3s infinite;
 }
 
+@media (orientation: portrait){
+    
+    .row{
+        display: block;
+    }
+    .box{
+        filter: opacity(100%);
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        font-size: 15px;
+    }
+    .box>img{
+        width: 30vw;
+    }
+    .date{
+        visibility: hidden;
+        position: absolute;
+    }
+    #info{
+        top: 5px;
+    }
+}
+
 @keyframes rainbow{
     0%{
         color: rgb(255, 0, 0);
