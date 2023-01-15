@@ -83,6 +83,10 @@ a:hover{
 
 
 @media (orientation: portrait){
+    #BGvideo{
+        width: 100vw;
+        height: 100vh;
+    }
     .banner{
         font-size: 20px;
         margin-top: 10vh;

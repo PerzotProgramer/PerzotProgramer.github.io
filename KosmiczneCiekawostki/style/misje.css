@@ -49,10 +49,6 @@
 }
 
 @media (orientation: portrait){
-    #BGvideo{
-        width: 100vw;
-        height: 100vh;
-    }
     .row{
         display: block;
         margin-bottom: 0;
