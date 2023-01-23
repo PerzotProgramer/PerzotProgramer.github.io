@@ -1,3 +1,7 @@
+.banner{
+    margin-top: 20vh;
+}
+
 .row{
     display: flex;
     justify-content: center;
