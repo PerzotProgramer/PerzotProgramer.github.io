@@ -1,3 +1,14 @@
+#logo{
+    position: absolute;
+    z-index: -1;
+    height: 30vw;
+    bottom: 47vh;
+    right: 50vw;
+    transform: translate(50%, 50%);
+
+    
+}
+
 .banner{
     margin-top: 20vh;
 }
