@@ -1,3 +1,7 @@
+#BGvideo{
+    filter: brightness(50%);
+}
+
 #info{
     position: relative;
     bottom: 75px;
