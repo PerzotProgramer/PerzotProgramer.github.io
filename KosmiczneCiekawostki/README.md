@@ -9,3 +9,4 @@ https://www.planetarobotow.pl<br>
 <br>
 
 ## <b>Strona powstała w celach edukacyjnych. Zrzekam się praw autorskich do zdjęć i informacji zawartych na witrynie.<br>
+Zalecam używać rozdzielczości Full HD (1920x1080)
