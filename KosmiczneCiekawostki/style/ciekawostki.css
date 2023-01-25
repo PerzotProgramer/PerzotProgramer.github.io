@@ -1,5 +1,5 @@
 #BGvideo{
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 #info{
@@ -13,17 +13,17 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 100px;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .box{
     background-color: rgba(0,0,0,0.5);
-    width: 20vw;
-    height: 50vh;
+    height: 500px;
+    width: 500px;
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
-    margin: 10px;
-    padding: 10px;
     position: relative;
     transition: 1s;
 }
@@ -39,6 +39,7 @@
 }
 
 .pyt{
+    width: 400px;
     filter: opacity(100%);
     font-size: 20px;
     position: absolute;
@@ -54,8 +55,9 @@
 }
 
 .odp{
+    width: 400px;
     filter: opacity(0%);
-    font-size: 11px;
+    font-size: 14px;
     position: absolute;
     top: 50%;
     left: 50%;
