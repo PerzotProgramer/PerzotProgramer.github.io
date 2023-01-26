@@ -20,7 +20,9 @@
 .box{
     background-color: rgba(0,0,0,0.5);
     height: 500px;
-    width: 500px;
+    padding: 10px;
+    width: 25vw;
+    margin: 2vw;
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
@@ -39,7 +41,7 @@
 }
 
 .pyt{
-    width: 400px;
+    width: 25vw;
     filter: opacity(100%);
     font-size: 20px;
     position: absolute;
@@ -55,7 +57,7 @@
 }
 
 .odp{
-    width: 400px;
+    width: 25vw;
     filter: opacity(0%);
     font-size: 14px;
     position: absolute;
