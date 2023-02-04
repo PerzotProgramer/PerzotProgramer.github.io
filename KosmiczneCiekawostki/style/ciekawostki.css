@@ -72,26 +72,6 @@
     transition: 1s;
 }
 
-/* !!! DO USUNIĘCIA?
-.box>img{
-    max-width: 20vw;
-    max-height: 30vh;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 1s;
-}
-
-.box:hover>img{
-    box-shadow: 0px 0px 10px white;
-    transition: 1s;
-}
-
-.link:visited{
-    color: white;
-}
-*/
-
 
 @media (orientation: portrait){
     .row{
@@ -105,6 +85,9 @@
         margin-right: auto;
         margin-top: 10vh;
         font-size: 15px;
+    }
+    .pyt,.odp{
+        width: 50vw;
     }
     #info{
         top: 5px;
