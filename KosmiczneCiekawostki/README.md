@@ -12,6 +12,5 @@ https://www.planetarobotow.pl<br>
 Przetestowane rozdzielczości:<br>
 1920x1080 (Full HD)<br>
 1280x720 (HD)<br>
-2400x1920 (Full HD telefonowe)
-<br>
+1080x2400 (Full HD telefonowe)<br>
 3840x2160 (4k)
