@@ -32,8 +32,6 @@
     color: #ffffff;
     background-color: #555555;
     box-shadow: 0px 0px 10px white;
-    text-shadow: 0px 0px 10px white;
-    transition: 1s;
 }
 
 .box>img{

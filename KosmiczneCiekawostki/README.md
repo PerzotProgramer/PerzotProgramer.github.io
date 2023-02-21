@@ -8,5 +8,10 @@ https://www.planetarobotow.pl<br>
 
 <br>
 
-## <b>Strona powstała w celach edukacyjnych. Zrzekam się praw autorskich do zdjęć i informacji zawartych na witrynie.<br>
-Zalecam używać rozdzielczości Full HD (1920x1080)
+## <b>Strona powstała w celach edukacyjnych. Zrzekam się praw autorskich do zdjęć i informacji zawartych na witrynie.<br><br>
+Przetestowane rozdzielczości:<br>
+1920x1080 (Full HD)<br>
+1280x720 (HD)<br>
+2400x1920 (Full HD telefonowe)
+<br>
+3840x2160 (4k)

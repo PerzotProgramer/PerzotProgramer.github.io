@@ -104,13 +104,13 @@ a:hover{
 }
 
 @keyframes blinking{
- 0%{
-    color: white;
- }   
- 50%{
-    color: rgb(185, 185, 185);
- }
- 100%{
-    color: white;
- }
+    0%{
+        color: white;
+    }   
+    50%{
+        color: rgb(185, 185, 185);
+    }
+    100%{
+        color: white;
+    }
 }

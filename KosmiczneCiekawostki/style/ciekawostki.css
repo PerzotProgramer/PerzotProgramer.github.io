@@ -36,7 +36,6 @@
     color: #ffffff;
     background-color: #555555;
     box-shadow: 0px 0px 10px white;
-    text-shadow: 0px 0px 10px white;
     transition: 1s;
 }
 
@@ -88,6 +87,7 @@
     }
     .pyt,.odp{
         width: 50vw;
+        font-size: 10px;
     }
     #info{
         top: 5px;
