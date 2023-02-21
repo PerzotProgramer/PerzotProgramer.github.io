@@ -2,12 +2,6 @@
     filter: brightness(80%);
 }
 
-#info{
-    position: relative;
-    bottom: 75px;
-    font-size: 30px;
-}
-
 .row{
     display: flex;
     justify-content: space-around;
@@ -18,25 +12,11 @@
 }
 
 .box{
-    background-color: rgba(0,0,0,0.5);
     height: 500px;
     padding: 10px;
     width: 25vw;
     margin: 2vw;
-    border: 2px solid white;
-    border-radius: 10px;
-    text-align: center;
     position: relative;
-    transition: 1s;
-}
-
-.box:hover{
-    filter: opacity(100%);
-    scale: 120%;
-    color: #ffffff;
-    background-color: #555555;
-    box-shadow: 0px 0px 10px white;
-    transition: 1s;
 }
 
 .pyt{
