@@ -19,7 +19,7 @@
     width: 20vh;
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait) , (max-width: 1200px){
     .row{
         display: block;
     }

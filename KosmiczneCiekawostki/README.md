@@ -5,10 +5,12 @@ https://space24.pl/wiadomosci <br>
 https://pl.wikipedia.org/wiki <br>
 https://nasa.gov <br>
 https://www.planetarobotow.pl<br>
-
+<br>
+Film "Escape Velocity" Davida Petersona <br>
+https://www.youtube.com/watch?v=PLcE3AI9wwE
 <br>
 
-## <b>Strona powstała w celach edukacyjnych. Zrzekam się praw autorskich do zdjęć i informacji zawartych na witrynie.<br><br>
+## <b>Strona powstała w celach edukacyjnych. Zrzekam się praw autorskich do zdjęć i informacji zawartych na witrynie.<br><br><br>
 Przetestowane rozdzielczości:<br>
 1920x1080 (Full HD)<br>
 1280x720 (HD)<br>

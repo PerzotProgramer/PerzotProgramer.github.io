@@ -22,7 +22,7 @@
 
 .box{
     position: relative;
-    height: 600px;
+    min-height: 700px;
     width: 30vw;
     margin: 30px;
 }
@@ -37,16 +37,16 @@
 
 .box img{
     max-width: 15vw;
-    max-height: 35vh;
+    max-height: 25vh;
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait) , (max-width: 1200px){
     .row{
         display: block;
     }
     .box{
         width: 50vw;
-        height: 40vh;
+        height: 60vh;
         margin-left: auto;
         margin-right: auto;
         margin-top: 7vh;
