@@ -39,6 +39,13 @@
     animation: rainbow 3s infinite;
 }
 
+#quote{
+    width: 75vw;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (orientation: portrait) , (max-width: 1200px){
     
     .row{
@@ -60,6 +67,9 @@
     }
     #info{
         top: 5px;
+    }
+    #quote{
+        font-size: 10px;
     }
 }
 

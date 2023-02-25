@@ -76,7 +76,7 @@ body{
     margin-right: auto;
     width: 75vw;
     font-size: 25px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.75);
     border: 2px solid white;
     border-radius: 10px;
     transition: 1s;
@@ -96,7 +96,7 @@ a:link{
 }
 
 a:visited{
-    color: grey;
+    color: #acacac;
     transition: 1s;
 }
 
