@@ -59,15 +59,18 @@
     }
     .box{
         width: 60vw;
-        height: 60vh;
+        height: 350px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 10vh;
+    }
+    .pyt{
+        width: 50vw;
         font-size: 15px;
     }
-    .pyt,.odp{
+    .odp{
         width: 50vw;
-        font-size: 10px;
+        font-size: 8px; 
     }
     #info{
         top: 5px;
