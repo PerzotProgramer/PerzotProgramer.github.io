@@ -1,0 +1,44 @@
+body{
+    color: #eeeeee;
+    background-color: #666666;
+    font-family: sans-serif;
+}
+.baner{
+    text-align: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+.box{
+    width: 70vw;
+    border: 5px solid #eeeeee;
+    border-radius: 25px;
+    padding-bottom: 50px;
+}
+.pytanie{
+    text-align: center;
+    font-size: 50px;
+}
+.odpowiedz{
+    margin-left: 30vw;
+    line-height: 4vh;
+}
+input + label{
+    border-radius: 5px;
+    padding: 5px;
+}
+.poprawna:checked + label{
+    background-color: rgb(0, 100, 0);
+}
+.zla:checked + label{
+    background-color: rgb(100, 0, 0);
+}
+input + label>.opis{
+    filter: opacity(0%);
+}
+input:checked + label>.opis{
+    filter: opacity(100%);
+}
