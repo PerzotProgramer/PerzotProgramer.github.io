@@ -10,6 +10,7 @@ body{
     text-align: center;
     padding: 0px;
     width: 50vw;
+    height: 20vh;
 }
 #links{
     display: block;
