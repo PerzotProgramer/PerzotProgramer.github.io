@@ -24,15 +24,14 @@ body{
     margin-top: 10vh;
 }
 
-.row{
-    display: flex;
-    margin-bottom: 10vh;
+.wrap{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
 }
 
 .box{
     width: 40vw;
     height: 400px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #aaaaaa;
 }
