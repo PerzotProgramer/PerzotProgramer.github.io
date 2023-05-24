@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Samochodowy Bamber</title>
+    <link rel="icon" href="res/icon.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -28,13 +29,38 @@
         Wszystkie niemieckie samochody</p>
     </div>
     <div class="wrap">
-        <div class="box cars audi">AUDI</div>
-        <div class="box cars bmw">BMW</div>
+        <div class="box cars audi">
+            <img src="res/audiQuattro.png" alt="auto" class="image">
+            <p class="opis">Marka: Audi<br>
+            Model: Quattro<br>
+            Rok Produkcji: 1980<br>
+            Moc Silnika: 150KM<br>
+            Przebieg: 210 050km<br>
+            Cena: 800 000zł</p>
+            <input type="button" value="kup" onclick="WczytajDane('Audi','Quattro','1980','150KM','210 050km','800 000zł','res/audiQuattro.png')">
+        </div>
+
+        <div class="box cars bmw">
+            <img src="res/bmwE46.png" alt="auto" class="image">
+            <p class="opis">Marka: BMW<br>
+                Model: E46<br>
+                Rok Produkcji: 2010<br>
+                Moc Silnika: 136KM<br>
+                Przebieg: 851 500km<br>
+                Cena: 50 000zł</p>
+            <input type="button" value="kup" onclick="WczytajDane('BMW','E46','2010','136KM','851 500km','50 000zł','res/bmwE46.png')">
+        </div>
+
         <div class="box cars volkswagen">VOLKSWAGEN</div>
+
         <div class="box cars opel">OPEL</div>
+
         <div class="box cars bmw">BMW</div>
+
         <div class="box cars porche">PORCHE</div>
+
         <div class="box cars mercedes">MERCEDES</div>
+
         <div class="box cars audi">AUDI</div>
     </div>
 </body>
