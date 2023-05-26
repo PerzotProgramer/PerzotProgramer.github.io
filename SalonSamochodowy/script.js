@@ -12,10 +12,10 @@ samochody = [
     {
         "marka": "BMW",
         "model": "E46",
-        "rokProdukcji": "1980",
+        "rokProdukcji": "2010",
         "konieMech": "136KM",
-        "przebieg": "210 050km",
-        "cena": "800 000zł",
+        "przebieg": "851 500km",
+        "cena": "50 000zł",
         "img": "res/bmwE46.png"
     }
 ]
