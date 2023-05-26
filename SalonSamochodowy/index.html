@@ -12,7 +12,7 @@
 <body>
     <div id="navbar">
         <label>Wyszukaj po marce:</label>
-        <select name="cars" id="cars" onchange="selection()">
+        <select name="cars" id="cars" onchange="Selection()">
             <option value="all">Wszystkie</option>
             <option value="volkswagen">Volkswagen</option>
             <option value="opel">Opel</option>
@@ -37,7 +37,7 @@
             Moc Silnika: 150KM<br>
             Przebieg: 210 050km<br>
             Cena: 800 000zł</p>
-            <input type="button" value="kup" onclick="WczytajDane('Audi','Quattro','1980','150KM','210 050km','800 000zł','res/audiQuattro.png')">
+            <input type="button" value="kup" onclick="WczytajDane(0)">
         </div>
 
         <div class="box cars bmw">
@@ -48,7 +48,7 @@
                 Moc Silnika: 136KM<br>
                 Przebieg: 851 500km<br>
                 Cena: 50 000zł</p>
-            <input type="button" value="kup" onclick="WczytajDane('BMW','E46','2010','136KM','851 500km','50 000zł','res/bmwE46.png')">
+            <input type="button" value="kup" onclick="WczytajDane(1)">
         </div>
 
         <div class="box cars volkswagen">VOLKSWAGEN</div>

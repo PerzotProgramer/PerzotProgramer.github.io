@@ -1,4 +1,27 @@
-function selection(){
+samochody = [ 
+    // Nieudolny JSON
+    {
+        "marka": "Audi",
+        "model": "Quattro",
+        "rokProdukcji": "1980",
+        "konieMech": "150KM",
+        "przebieg": "210 050km",
+        "cena": "800 000zł",
+        "img": "res/audiQuattro.png"
+    },
+    {
+        "marka": "BMW",
+        "model": "E46",
+        "rokProdukcji": "1980",
+        "konieMech": "136KM",
+        "przebieg": "210 050km",
+        "cena": "800 000zł",
+        "img": "res/bmwE46.png"
+    }
+]
+
+
+function Selection(){
     var select = document.getElementById("cars");
     var value = select.value;
 
@@ -58,14 +81,14 @@ function selection(){
         }
 }
 
-function WczytajDane(marka, model, rokProdukcji, konieMech, przebieg, cena, img){
-    sessionStorage.setItem("marka", marka);
-    sessionStorage.setItem("model", model);
-    sessionStorage.setItem("rokProdukcji", rokProdukcji);
-    sessionStorage.setItem("konieMech", konieMech);
-    sessionStorage.setItem("przebieg", przebieg);
-    sessionStorage.setItem("cena", cena);
-    sessionStorage.setItem("img", img);
+function WczytajDane(index){
+    sessionStorage.setItem("marka", samochody[index].marka);
+    sessionStorage.setItem("model", samochody[index].model);
+    sessionStorage.setItem("rokProdukcji", samochody[index].rokProdukcji);
+    sessionStorage.setItem("konieMech", samochody[index].konieMech);
+    sessionStorage.setItem("przebieg", samochody[index].przebieg);
+    sessionStorage.setItem("cena", samochody[index].cena);
+    sessionStorage.setItem("img", samochody[index].img);
     location.href = "zakup.html";
 }
 
@@ -101,7 +124,7 @@ function Zakup(){
     var miesiac = date.getMonth() + 1;
     var rok = date.getFullYear();
     
-    dzien += Math.floor(Math.random() * 21);
+    dzien += 7 + Math.floor(Math.random() * 7);
     if (dzien >= 31){
         dzien %= 31;
         miesiac += 1;
