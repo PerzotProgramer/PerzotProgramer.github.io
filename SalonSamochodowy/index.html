@@ -10,7 +10,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div id="navbar">
+    <div id="navbar" tabindex="0">
         <label>Wyszukaj po marce:</label>
         <select name="cars" id="cars" onchange="Selection()">
             <option value="all">Wszystkie</option>
@@ -31,24 +31,28 @@
     <div class="wrap">
         <div class="box cars audi">
             <img src="res/audiQuattro.png" alt="auto" class="image">
-            <p class="opis">Marka: Audi<br>
-            Model: Quattro<br>
-            Rok Produkcji: 1980<br>
-            Moc Silnika: 150KM<br>
-            Przebieg: 210 050km<br>
-            Cena: 800 000zł</p>
-            <input type="button" value="kup" onclick="WczytajDane(0)">
+            <span class="opis">
+                <p>Marka: Audi<br>
+                Model: Quattro<br>
+                Rok Produkcji: 1980<br>
+                Moc Silnika: 150KM<br>
+                Przebieg: 210 050km<br>
+                Cena: 800 000zł</p>
+                <input class="kup" type="button" value="kup" onclick="WczytajDane(0)">
+            </span>
         </div>
 
         <div class="box cars bmw">
             <img src="res/bmwE46.png" alt="auto" class="image">
-            <p class="opis">Marka: BMW<br>
+            <span class="opis">
+                <p>Marka: BMW<br>
                 Model: E46<br>
                 Rok Produkcji: 2010<br>
                 Moc Silnika: 136KM<br>
                 Przebieg: 851 500km<br>
                 Cena: 50 000zł</p>
-            <input type="button" value="kup" onclick="WczytajDane(1)">
+                <input class="kup" type="button" value="kup" onclick="WczytajDane(1)">
+            </span>
         </div>
 
         <div class="box cars volkswagen">VOLKSWAGEN</div>

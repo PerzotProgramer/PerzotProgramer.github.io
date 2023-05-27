@@ -1,20 +1,20 @@
 body{
-    background-color: #666666;
+    background-color: #c67363;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    color: #dddddd;
+    color: #eeeeee;
 }
 
 #navbar{
-    background-color: #999999;
-    display: flex;
+    background-color: #782e3b;
     position: fixed;
-    width: 100vw;
     padding: 10px;
-    top: 0;
-    left: 0;
+    top: 5px;
     gap: 10px;
+    border-radius: 5px;
+    z-index: 1;
 }
+
 
 #title{
     text-align: center;
@@ -37,8 +37,10 @@ body{
 
 .box{
     width: 40vw;
-    background-color: #aaaaaa;
+    background-color: #a14746;
     padding: 10px;
+    height: 250px;
+    border-radius: 5px;
 }
 
 
@@ -47,13 +49,64 @@ body{
     margin: 0;
 }
 
-.image{
-    width: 400px;
-    margin: 50px;
-    float: left;
+.opis{
+    font-size: large;
+    position: relative;
+    margin-top: 25px;
+    float: right;
 }
 
-.opis{
-    margin-top: 100px;
-    
+.image{
+    height: 200px;
+    margin-top: 25px;
+    float: left;
+    border-radius: 5px;
+}
+
+.image2{
+    height: 200px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.kup{
+    margin-left: 50px;
+    width: 50px;
+}
+
+@media (orientation:portrait) , (max-width: 1350px){
+    .box{
+        width: 75vw;
+    }
+
+}
+
+@media (max-width: 710px){
+    .box{
+        width: 90vw;
+    }
+    .image{
+        height: 150px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 500px){
+    #title{
+        font-size: large;
+    }
+
+    .image{
+        height: 100px;
+        margin-top: 75px;
+    }
+
+    .opis{
+        font-size: small;
+        margin-top: 50px;
+    }
+
+    .kup{
+        margin-left: 25px;
+    }
 }
