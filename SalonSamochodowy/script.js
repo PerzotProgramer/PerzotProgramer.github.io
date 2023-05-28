@@ -14,14 +14,32 @@ samochody = [
         "model": "E46",
         "rokProdukcji": "2010",
         "konieMech": "136KM",
-        "przebieg": "851 500km",
+        "przebieg": "451 500km",
         "cena": "50 000zł",
         "img": "res/bmwE46.png"
+    },
+    {
+        "marka": "Volkswagen",
+        "model": "Golf mk1",
+        "rokProdukcji": "1982",
+        "konieMech": "90KM",
+        "przebieg": "267 800km",
+        "cena": "20 000zł",
+        "img": "res/golf1.png"
+    },
+    {
+        "marka": "Opel",
+        "model": "Astra mk3",
+        "rokProdukcji": "2011",
+        "konieMech": "110KM",
+        "przebieg": "250 500km",
+        "cena": "23 00zł",
+        "img": "res/astra.png"
     }
 ]
 
 
-function Selection(){
+function Wybor(){
     var select = document.getElementById("cars");
     var value = select.value;
 
