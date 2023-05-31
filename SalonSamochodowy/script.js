@@ -6,7 +6,7 @@ samochody = [
         "rokProdukcji": "1980",
         "konieMech": "150KM",
         "przebieg": "210 050km",
-        "cena": "800 000zł",
+        "cena": 800000,
         "img": "res/audiQuattro.png"
     },
     {
@@ -15,7 +15,7 @@ samochody = [
         "rokProdukcji": "2010",
         "konieMech": "136KM",
         "przebieg": "451 500km",
-        "cena": "50 000zł",
+        "cena": 50000,
         "img": "res/bmwE46.png"
     },
     {
@@ -24,7 +24,7 @@ samochody = [
         "rokProdukcji": "1982",
         "konieMech": "90KM",
         "przebieg": "267 800km",
-        "cena": "20 000zł",
+        "cena": 20000,
         "img": "res/golf1.png"
     },
     {
@@ -33,7 +33,7 @@ samochody = [
         "rokProdukcji": "2011",
         "konieMech": "110KM",
         "przebieg": "250 500km",
-        "cena": "23 00zł",
+        "cena": 23000,
         "img": "res/astra.png"
     }
 ]
@@ -46,12 +46,12 @@ function Wybor(){
     switch (value){
         case "all":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++) divs[i].style.display = "block";
+            for (var i = 0; i < divs.length; i++) divs[i].style.display = "block";
             break
 
         case "volkswagen":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++){
+            for (var i = 0; i < divs.length; i++){
                 if (divs[i].classList.contains("volkswagen")) divs[i].style.display = "block";
                 else divs[i].style.display = "none";
             }
@@ -59,7 +59,7 @@ function Wybor(){
 
         case "opel":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++){
+            for (var i = 0; i < divs.length; i++){
                 if (divs[i].classList.contains("opel")) divs[i].style.display = "block";
                 else divs[i].style.display = "none";
             }
@@ -67,7 +67,7 @@ function Wybor(){
 
         case "mercedes":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++){
+            for (var i = 0; i < divs.length; i++){
                 if (divs[i].classList.contains("mercedes")) divs[i].style.display = "block";
                 else divs[i].style.display = "none";
             }
@@ -75,7 +75,7 @@ function Wybor(){
 
         case "audi":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++){
+            for (var i = 0; i < divs.length; i++){
                 if (divs[i].classList.contains("audi")) divs[i].style.display = "block";
                 else divs[i].style.display = "none";
             }
@@ -83,7 +83,7 @@ function Wybor(){
 
         case "porche":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++){
+            for (var i = 0; i < divs.length; i++){
                 if (divs[i].classList.contains("porche")) divs[i].style.display = "block";
                 else divs[i].style.display = "none";
             }
@@ -91,7 +91,7 @@ function Wybor(){
 
         case "bmw":
             var divs = document.getElementsByClassName("cars");
-            for (i = 0; i < divs.length; i++){
+            for (var i = 0; i < divs.length; i++){
                 if (divs[i].classList.contains("bmw")) divs[i].style.display = "block";
                 else divs[i].style.display = "none";
             }
@@ -124,19 +124,29 @@ function OdczytajDane(){
     document.getElementById("rokProdukcji").innerHTML = "Rok Produkcji: ".concat(rokProdukcji);
     document.getElementById("konieMech").innerHTML = "Moc silnika: ".concat(konieMech);
     document.getElementById("przebieg").innerHTML = "Przebieg: ".concat(przebieg);
-    document.getElementById("cena").innerHTML = "Cena: ".concat(cena);
+    document.getElementById("cena").innerHTML = "Cena: ".concat(cena).concat(" zł");
     document.getElementById("img").src = img;
 }
 
 function Wroc(){location.href = "index.html";}
 
 function Potwierdz(){
+    var cenaDodatkow = 0;
+    var dodatki = document.getElementsByName("dodatki");
+    for(var i = 0; i < dodatki.length; i++){
+        if (dodatki[i].checked) cenaDodatkow += parseInt(dodatki[i].value);
+    }
+    sessionStorage.setItem("cenaDodatkow", cenaDodatkow);
     location.href = "potwierdzenie.html";
 }
 
 function Zakup(){
     var marka = sessionStorage.getItem("marka");
     var model = sessionStorage.getItem("model");
+    var sumaCen = sessionStorage.getItem("cena");
+    var cenaDodatkow = sessionStorage.getItem("cenaDodatkow");
+    sumaCen = parseInt(sumaCen) + parseInt(cenaDodatkow)
+
     var date = new Date();
     var dzien = date.getDate();
     var miesiac = date.getMonth() + 1;
@@ -151,7 +161,19 @@ function Zakup(){
     
     var wiadomosc = "Dziękujemy za zakup samochodu ".concat(marka).concat(" ").concat(model);
     var czasOczekiwania = "Przewidywany czas odbioru: ".concat(dzien).concat(".").concat(miesiac).concat(".").concat(rok);
-    
+    var zaplata = "Finalna cena: ".concat(sumaCen).concat(" zł");
     document.getElementById("wiadomosc").innerHTML = wiadomosc;
     document.getElementById("dostawa").innerHTML = czasOczekiwania;
+    document.getElementById("zaplata").innerHTML = zaplata;
+}
+
+function FPlatnosci(){
+    if(document.getElementById("naRaty").checked){
+    document.getElementById("raty").style.display = "initial";
+    document.getElementById("ratyLabel").style.display="initial";
+    }
+    else{
+        document.getElementById("raty").style.display = "none";
+        document.getElementById("ratyLabel").style.display = "none";
+    }
 }

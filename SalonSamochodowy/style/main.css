@@ -1,0 +1,46 @@
+/*
+PALETA KOLORÓW
+#5c1f31
+#782e3b
+#a14746
+#c67363
+#de937c
+*/
+
+body{
+    background-color: #c67363;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #eeeeee;
+}
+
+#navbar{
+    background-color: #782e3b;
+    position: fixed;
+    padding: 10px;
+    top: 5px;
+    gap: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#main{
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.image{
+    height: 200px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
