@@ -1,3 +1,4 @@
 # PROJEKTY MOICH STRON INTERNETOWYCH
-Część dla siebie, część dla szkoły. <br>
-Jak zawsze można kraść jak popadnie :D
+## UWAGA!!!
+<b>W repozytorium znajdują się dane i zdjęcia, których nie jestem właścicielem.
+Zrzekam się praw autorskich do zdjęć, informacji oraz kodu zawartego w tym repozytorium.</b>
