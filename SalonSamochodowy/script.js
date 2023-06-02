@@ -6,8 +6,8 @@ samochody = [
         "rokProdukcji": "1980",
         "konieMech": "150KM",
         "przebieg": "210 050km",
-        "cena": 800000,
-        "img": "res/audiQuattro.png"
+        "cena": 500000,
+        "img": "res/quattro.png"
     },
     {
         "marka": "BMW",
@@ -16,7 +16,7 @@ samochody = [
         "konieMech": "136KM",
         "przebieg": "451 500km",
         "cena": 50000,
-        "img": "res/bmwE46.png"
+        "img": "res/e46.png"
     },
     {
         "marka": "Volkswagen",
@@ -34,7 +34,43 @@ samochody = [
         "konieMech": "110KM",
         "przebieg": "250 500km",
         "cena": 23000,
-        "img": "res/astra.png"
+        "img": "res/astra3.png"
+    },
+    {
+        "marka": "BMW",
+        "model": "320i",
+        "rokProdukcji": "2006",
+        "konieMech": "170KM",
+        "przebieg": "120 500km",
+        "cena": 25000,
+        "img": "res/320i.png"
+    },
+    {
+        "marka": "Porche",
+        "model": "911",
+        "rokProdukcji": "2023",
+        "konieMech": "385KM",
+        "przebieg": "10 230km",
+        "cena": 611000,
+        "img": "res/911.png"
+    },
+    {
+        "marka": "Mercedes",
+        "model": "W124",
+        "rokProdukcji": "1995",
+        "konieMech": "113KM",
+        "przebieg": "99 520km",
+        "cena": 62000,
+        "img": "res/w124.png"
+    },
+    {
+        "marka": "Audi",
+        "model": "100 Coupe S",
+        "rokProdukcji": "1975",
+        "konieMech": "112KM",
+        "przebieg": "27 000km",
+        "cena": 55000,
+        "img": "res/coupe100.png"
     }
 ]
 
