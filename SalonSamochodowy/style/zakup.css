@@ -13,6 +13,21 @@
     margin-top: 50px;
 }
 
+#opis{
+    width: 1050px;
+    height: 250px;
+}
+
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image{
+    margin-right: 300px;
+}
+
 .oknoZakupu{
     margin-left: auto;
     margin-right: auto;
@@ -21,9 +36,27 @@
     background-color: #de937c;
     border: 5px solid #a14746;
     border-radius: 5px;
-    width: 50vw;
+    width: 1000px;
 }
 
-.image{
-    margin-right: 250px;
+@media (max-width: 1450px){
+    .oknoZakupu{
+        width: 750px;
+    }
+    .image{
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 950px){
+    .oknoZakupu{
+        width: 500px;
+    }
+    .info{
+        font-size: large;
+    }
+    .image{
+        height: 150px;
+        margin-right: 50px;
+    }
 }

@@ -131,13 +131,27 @@ function OdczytajDane(){
 function Wroc(){location.href = "index.html";}
 
 function Potwierdz(){
+
+    var dane = document.getElementsByName("dane");
+    var breaker = true;
+    for (var i = 0; i < dane.length; i++){
+        if (dane[i].value == null || dane[i].value == "") {
+            breaker = false;
+        }
+    }
+
     var cenaDodatkow = 0;
     var dodatki = document.getElementsByName("dodatki");
     for(var i = 0; i < dodatki.length; i++){
         if (dodatki[i].checked) cenaDodatkow += parseInt(dodatki[i].value);
     }
     sessionStorage.setItem("cenaDodatkow", cenaDodatkow);
-    location.href = "potwierdzenie.html";
+    if (breaker) {
+        location.href = "potwierdzenie.html";
+    } 
+    else {
+        alert("Proszę wypełnić dane osobowe!");
+    }
 }
 
 function Zakup(){
