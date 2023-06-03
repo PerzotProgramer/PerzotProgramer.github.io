@@ -14,7 +14,7 @@
 }
 
 #opis{
-    width: 1050px;
+    width: 1000px;
     height: 250px;
 }
 
@@ -40,15 +40,21 @@
 }
 
 @media (max-width: 1450px){
+    #opis{
+        width: 750px;
+    }
     .oknoZakupu{
         width: 750px;
     }
     .image{
-        margin-right: 100px;
+        margin-right: 70px;
     }
 }
 
 @media (max-width: 950px){
+    #opis{
+        width: 500px;
+    }
     .oknoZakupu{
         width: 500px;
     }
