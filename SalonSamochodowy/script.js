@@ -71,6 +71,33 @@ samochody = [
         "przebieg": "27 000km",
         "cena": 55000,
         "img": "res/coupe100.png"
+    },
+    {
+        "marka": "Volkswagen",
+        "model": "Golf mk4",
+        "rokProdukcji": "2002",
+        "konieMech": "150KM",
+        "przebieg": "303 750km",
+        "cena": 10500,
+        "img": "res/golf4.png"
+    },
+    {
+        "marka": "Volkswagen",
+        "model": "Passat mk6",
+        "rokProdukcji": "2008",
+        "konieMech": "140KM",
+        "przebieg": "289 410km",
+        "cena": 20900,
+        "img": "res/passat6.png"
+    },
+    {
+        "marka": "Mercedes",
+        "model": "S350",
+        "rokProdukcji": "2015",
+        "konieMech": "258KM",
+        "przebieg": "260 000km",
+        "cena": 159000,
+        "img": "res/s350.png"
     }
 ]
 
@@ -219,8 +246,8 @@ function Zakup(){
 
 function FPlatnosci(){
     if(document.getElementById("naRaty").checked){
-    document.getElementById("raty").style.display = "initial";
-    document.getElementById("ratyLabel").style.display="initial";
+        document.getElementById("raty").style.display = "initial";
+        document.getElementById("ratyLabel").style.display="initial";
     }
     else{
         document.getElementById("raty").style.display = "none";
