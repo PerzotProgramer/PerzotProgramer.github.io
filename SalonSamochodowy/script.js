@@ -195,11 +195,20 @@ function Wroc(){location.href = "index.html";}
 
 function Potwierdz(){
 
+    var FPlatnosci = document.querySelector('input[name = "formaPlatnosci"]:checked');
     var dane = document.getElementsByName("dane");
-    var breaker = true;
+    var breaker = false;
+    var check = undefined;
+
+    if (FPlatnosci == null){
+        breaker = true;
+        check = 0;
+    }
+    
     for (var i = 0; i < dane.length; i++){
-        if (dane[i].value == null || dane[i].value == "") {
-            breaker = false;
+        if (dane[i].value == null || dane[i].value == "" && check == undefined) {
+            breaker = true;
+            check = 1;
         }
     }
 
@@ -210,10 +219,18 @@ function Potwierdz(){
     }
     sessionStorage.setItem("cenaDodatkow", cenaDodatkow);
     if (breaker) {
-        location.href = "potwierdzenie.html";
+        if (check == 0) {
+            alert("Proszę wybrać formę płatności!");
+        }
+        else if (check == 1) {
+            alert("Proszę wypełnić dane osobowe!");
+        }
+        else if (check == undefined) {
+            alert("Nie wiem jak ci się to udało");
+        }
     } 
     else {
-        alert("Proszę wypełnić dane osobowe!");
+        location.href = "potwierdzenie.html";
     }
 }
 
