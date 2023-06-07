@@ -237,6 +237,7 @@ function Potwierdz(){
 function Zakup(){
     var marka = sessionStorage.getItem("marka");
     var model = sessionStorage.getItem("model");
+    var img = sessionStorage.getItem("img");
     var sumaCen = sessionStorage.getItem("cena");
     var cenaDodatkow = sessionStorage.getItem("cenaDodatkow");
     sumaCen = parseInt(sumaCen) + parseInt(cenaDodatkow)
@@ -259,6 +260,7 @@ function Zakup(){
     document.getElementById("wiadomosc").innerHTML = wiadomosc;
     document.getElementById("dostawa").innerHTML = czasOczekiwania;
     document.getElementById("zaplata").innerHTML = zaplata;
+    document.getElementById("img").src = img;
 }
 
 function FPlatnosci(){
