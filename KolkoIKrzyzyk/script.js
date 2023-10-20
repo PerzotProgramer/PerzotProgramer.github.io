@@ -41,7 +41,7 @@ function WinCheck()
         [0,3,6],[1,4,7],[2,5,8],
         [0,4,8],[2,4,6]
     ]
-    console.log(tiles)
+
     WinCombos.forEach(arr => {
         const circleWins = arr.every(
             tile => tiles[tile].classList.contains("O"))
