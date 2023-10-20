@@ -1,31 +1,34 @@
 let turn = "O";
 let win = false;
+let draw = false;
+let moves = 0;
 
 function Click()
 {
-    console.log(win);
     if (turn === "O")
     {
         window.onclick = e => {
-            if (win) return;
+            if (win || draw) return;
             if (document.getElementById(e.target.id).innerHTML !== "") return;
             document.getElementById(e.target.id).innerHTML = turn;
             document.getElementById(e.target.id).classList.add("O");
             turn = "X";
             document.getElementById("info").innerHTML = "Ruch " + turn;
             WinCheck();
+            DrawCheck();
         }
     }
     if (turn === "X")
     {
         window.onclick = e => {
-            if (win) return;
+            if (win || draw) return;
             if (document.getElementById(e.target.id).innerHTML !== "") return;
             document.getElementById(e.target.id).innerHTML = turn;
             document.getElementById(e.target.id).classList.add("X");
             turn = "O";
             document.getElementById("info").innerHTML = "Ruch " + turn;
             WinCheck();
+            DrawCheck();
         }
     }
 }
@@ -57,4 +60,14 @@ function WinCheck()
                 win = true;
             }
     })
+}
+
+function DrawCheck()
+{
+    moves ++;
+    if (moves === 9)
+    {
+        document.getElementById("info").innerHTML = "REMIS!";
+        draw = true;
+    }
 }
