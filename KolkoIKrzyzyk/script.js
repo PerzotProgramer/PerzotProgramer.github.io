@@ -3,11 +3,11 @@ let win = false;
 
 function Click()
 {
-    if (win) return; // nie wiem czemu to nie działa
     console.log(win);
     if (turn === "O")
     {
         window.onclick = e => {
+            if (win) return;
             if (document.getElementById(e.target.id).innerHTML !== "") return;
             document.getElementById(e.target.id).innerHTML = turn;
             document.getElementById(e.target.id).classList.add("O");
@@ -19,6 +19,7 @@ function Click()
     if (turn === "X")
     {
         window.onclick = e => {
+            if (win) return;
             if (document.getElementById(e.target.id).innerHTML !== "") return;
             document.getElementById(e.target.id).innerHTML = turn;
             document.getElementById(e.target.id).classList.add("X");
