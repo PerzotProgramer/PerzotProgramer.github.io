@@ -37,3 +37,9 @@ body {
 .tile:hover {
     background-color: #888888;
 }
+
+@media (orientation: portrait) {
+    body {
+        font-size: 2rem;
+    }
+}
