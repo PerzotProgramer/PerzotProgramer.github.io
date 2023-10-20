@@ -1,0 +1,39 @@
+body {
+    background-color: #444444;
+    font-size: 4rem;
+    font-family: sans-serif;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+#reset {
+    background-color: #666666;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#reset:hover {
+    background-color: #888888;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.tile {
+    background-color: #666666;
+    font-size: 5rem;
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tile:hover {
+    background-color: #888888;
+}
