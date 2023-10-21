@@ -45,7 +45,7 @@ body {
     text-align: center;
 }
 
-.tile:hover:not(.O):not(.X):not(.block){
+.tile:hover:not(.O):not(.X):not(.block) {
     background-color: #888888;
     cursor: pointer;
 }
