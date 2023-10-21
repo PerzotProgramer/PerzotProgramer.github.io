@@ -45,8 +45,9 @@ body {
     text-align: center;
 }
 
-.tile:hover {
+.tile:hover:not(.O):not(.X):not(.block){
     background-color: #888888;
+    cursor: pointer;
 }
 
 @media (orientation: portrait) {

@@ -42,6 +42,8 @@ function WinCheck() {
         if (circleWins) {
             document.getElementById("info").innerHTML = "<span id='win'>O WYGRAŁO!</span>";
             isOver = true;
+            const tiles = document.getElementsByClassName("tile");
+            for (let i = 0; i < tiles.length; i++) tiles[i].classList.add("block");
         }
     })
     WinCombos.forEach(arr => {
@@ -49,6 +51,7 @@ function WinCheck() {
         if (crossWins) {
             document.getElementById("info").innerHTML = "<span id='win'>X WYGRAŁ!</span>";
             isOver = true;
+            for (let i = 0; i < tiles.length; i++) tiles[i].classList.add("block");
         }
     })
 }
