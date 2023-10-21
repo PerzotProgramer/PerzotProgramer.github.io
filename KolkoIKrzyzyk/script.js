@@ -40,14 +40,14 @@ function WinCheck() {
     WinCombos.forEach(arr => {
         const circleWins = arr.every(tile => tiles[tile].classList.contains("O"))
         if (circleWins) {
-            document.getElementById("info").innerHTML = "O Wygrało!";
+            document.getElementById("info").innerHTML = "<span id='win'>O WYGRAŁO!</span>";
             isOver = true;
         }
     })
     WinCombos.forEach(arr => {
         const crossWins = arr.every(tile => tiles[tile].classList.contains("X"))
         if (crossWins) {
-            document.getElementById("info").innerHTML = "X Wygrał!";
+            document.getElementById("info").innerHTML = "<span id='win'>X WYGRAŁ!</span>";
             isOver = true;
         }
     })
@@ -56,7 +56,7 @@ function WinCheck() {
 function DrawCheck() {
     moves++;
     if (moves === 9) {
-        document.getElementById("info").innerHTML = "REMIS!";
+        document.getElementById("info").innerHTML = "<span id='draw'>REMIS!</span>";
         isOver = true;
     }
 }

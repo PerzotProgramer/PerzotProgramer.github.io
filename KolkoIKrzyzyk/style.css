@@ -19,6 +19,14 @@ body {
     background-color: #888888;
 }
 
+#win {
+    color: #00a400;
+}
+
+#draw {
+    color: #cb0000;
+}
+
 .row {
     display: flex;
     justify-content: center;
