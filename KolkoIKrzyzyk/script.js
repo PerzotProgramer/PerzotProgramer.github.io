@@ -12,7 +12,7 @@ function Click() {
             turn = "X";
             document.getElementById("info").innerHTML = "Ruch " + turn;
             WinCheck();
-            DrawCheck();
+            if (!isOver) DrawCheck();
         }
     }
     if (turn === "X") {
@@ -24,7 +24,7 @@ function Click() {
             turn = "O";
             document.getElementById("info").innerHTML = "Ruch " + turn;
             WinCheck();
-            DrawCheck();
+            if (!isOver) DrawCheck();
         }
     }
 }
