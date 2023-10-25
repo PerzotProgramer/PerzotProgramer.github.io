@@ -8,6 +8,10 @@ body {
     user-select: none;
 }
 
+p {
+    transition: 0.2s;
+}
+
 #reset {
     background-color: #666666;
     font-size: 2rem;
@@ -15,10 +19,12 @@ body {
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 #reset:hover {
     background-color: #888888;
+    transform: scale(105%);
 }
 
 #win {
@@ -43,15 +49,23 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     text-align: center;
+    transition: 0.2s;
 }
 
 .tile:hover:not(.O):not(.X):not(.block) {
     background-color: #888888;
     cursor: pointer;
+    transform: scale(105%);
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait) or (max-height: 720px) {
     body {
         font-size: 2rem;
+    }
+
+    .tile {
+        width: 75px;
+        height: 75px;
+        font-size: 3.75rem;
     }
 }
