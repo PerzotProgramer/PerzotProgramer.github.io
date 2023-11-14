@@ -1,5 +1,10 @@
+/*
+    Linki do palety kolorów gradientów użytych na stronie:
+    https://www.eggradients.com/gradient/ctrl-s
+    https://www.eggradients.com/gradient/low-probability
+*/
+
 body {
-    background-color: #444444;
     font-size: 4rem;
     font-family: sans-serif;
     font-weight: bolder;
@@ -12,8 +17,19 @@ p {
     transition: 0.2s;
 }
 
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff1493;
+    background-image: linear-gradient(319deg, #ff1493 0%, #0000ff 37%, #ff8c00 100%);
+}
+
 #reset {
-    background-color: #666666;
+    background-color: #663dff;
+    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
     font-size: 2rem;
     border: 2px solid black;
     border-radius: 5px;
@@ -23,7 +39,6 @@ p {
 }
 
 #reset:hover {
-    background-color: #888888;
     transform: scale(105%);
 }
 
@@ -35,13 +50,22 @@ p {
     color: #cb0000;
 }
 
+.textShadow {
+    text-shadow: #ca69ff 0.5rem 0.5rem 1rem;
+}
+
+.blinking{
+    animation: blinking 1s infinite;
+}
+
 .row {
     display: flex;
     justify-content: center;
 }
 
 .tile {
-    background-color: #666666;
+    background-color: #663dff;
+    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
     font-size: 5rem;
     width: 100px;
     height: 100px;
@@ -56,6 +80,18 @@ p {
     background-color: #888888;
     cursor: pointer;
     transform: scale(105%);
+}
+
+@keyframes blinking {
+    0%{
+        text-shadow: #5b5b5b 0 0 1rem;
+    }
+    50%{
+        text-shadow: #ffffff 0 0 1rem;
+    }
+    100%{
+        text-shadow: #5b5b5b 0 0 1rem;
+    }
 }
 
 @media (orientation: portrait) or (max-height: 720px) {
