@@ -44,6 +44,10 @@ body {
     font-size: 2rem;
 }
 
+.section {
+    margin-top: 70px;
+}
+
 .button {
     background-color: #626262;
     margin: 25px auto;
