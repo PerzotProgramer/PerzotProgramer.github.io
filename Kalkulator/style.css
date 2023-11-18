@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     text-align: center;
+    user-select: none;
 }
 
 #background {
@@ -38,7 +39,11 @@ body {
 #outputText {
     font-size: 3rem;
     text-align: right;
-    padding-right: 25px;
+    position: relative;
+    bottom: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    word-wrap: anywhere;
 }
 
 .row {
@@ -63,6 +68,10 @@ body {
     background-color: #dddddd;
 }
 
+/*.box:focus {*/
+/*    animation: click 0.2s;*/
+/*}*/
+
 .big {
     width: 210px;
 }
@@ -74,3 +83,13 @@ body {
 .textShadow {
     text-shadow: #00ff31 0.5rem 0.5rem 1rem;
 }
+
+/*@keyframes click {*/
+/*    50% {*/
+/*        transform: scale(95%);*/
+/*    }*/
+/*    100% {*/
+/*        transform: scale(100%);*/
+
+/*    }*/
+/*}*/
