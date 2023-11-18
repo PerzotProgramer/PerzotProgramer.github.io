@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     text-align: center;
     user-select: none;
+    overflow: hidden;
 }
 
 #background {
@@ -9,7 +10,6 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
     background-color: #a4075f;
     background-image: linear-gradient(140deg, #00ffce 0%, #c100ff 37%, #00ff31 100%);
 }
@@ -68,10 +68,6 @@ body {
     background-color: #dddddd;
 }
 
-/*.box:focus {*/
-/*    animation: click 0.2s;*/
-/*}*/
-
 .big {
     width: 210px;
 }
@@ -84,12 +80,15 @@ body {
     text-shadow: #00ff31 0.5rem 0.5rem 1rem;
 }
 
-/*@keyframes click {*/
-/*    50% {*/
-/*        transform: scale(95%);*/
-/*    }*/
-/*    100% {*/
-/*        transform: scale(100%);*/
+@media (orientation: portrait) or (max-height: 720px) {
+    
+    #title{
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
 
-/*    }*/
-/*}*/
+    #main {
+        transform: scale(70%);
+        margin-top: -10vh;
+    }
+}
