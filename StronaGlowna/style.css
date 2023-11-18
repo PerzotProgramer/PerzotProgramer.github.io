@@ -15,10 +15,6 @@
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #aaaaaa;
-}
-
 body {
     overflow-x: hidden;
     color: #dddddd;
