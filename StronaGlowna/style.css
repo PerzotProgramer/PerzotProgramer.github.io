@@ -1,0 +1,58 @@
+body {
+    overflow-x: hidden;
+    color: white;
+    font-family: sans-serif;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #262626;
+}
+
+#header {
+    text-align: center;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    border: 10px solid white;
+    border-radius: 25px;
+    width: 800px;
+}
+
+#footer {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.text {
+    font-size: 1.5rem;
+}
+
+.bigText {
+    font-size: 2rem;
+}
+
+.button {
+    background-color: #626262;
+    margin: 25px auto;
+    width: 500px;
+    border: 5px solid white;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: scale(105%);
+}
