@@ -17,6 +17,7 @@
 
 body {
     overflow-x: hidden;
+    user-select: none;
     color: #dddddd;
     font-family: 'Comfortaa', sans-serif;
     
@@ -25,6 +26,11 @@ body {
 p {
     text-shadow: #ffd000 0 0 30px;
     font-weight: bold;
+}
+
+a {
+    color: #dddddd;
+    text-decoration: none;
 }
 
 #background {
