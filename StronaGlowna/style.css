@@ -20,7 +20,7 @@ body {
     user-select: none;
     color: #dddddd;
     font-family: 'Comfortaa', sans-serif;
-    
+
 }
 
 p {
@@ -95,4 +95,23 @@ a {
 .button:hover {
     background-color: rgba(145, 145, 145, 1);
     transform: scale(105%);
+}
+
+@media (orientation: portrait) {
+    #title {
+        font-size: 1.5rem;
+    }
+    
+    #main {
+        width: 375px;
+    }    
+    
+    .button {
+        font-size: 0.5rem;
+        width: 250px;
+    }
+    
+    .bigText, .text{
+        font-size: 1rem;
+    }
 }
