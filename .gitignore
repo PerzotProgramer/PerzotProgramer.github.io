@@ -1,3 +1,14 @@
-.idea
+# WZIĘTE Z https://github.com/PerzotProgrammer/Tech19.html/blob/main/.gitignore
+# Może być nieakutalne względem pierwotnej wersji.
+
+# Pliki
+*.temp.*
+*.test.*
+
+
+# Foldery
 .vscode
-.vs
+.idea
+Trening
+Test
+Gitignore
