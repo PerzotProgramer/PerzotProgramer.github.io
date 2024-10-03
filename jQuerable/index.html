@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuerable - Wordle inspired game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <p class="bigText">jQuerable</p>
+        <p>Wordle inspired game powered by jQuery</p>
+    </div>
+    <div id="grid">
+        <div class="gridRow" id="rowId0">
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+        </div>
+        <div class="gridRow" id="rowId1">
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+        </div>
+        <div class="gridRow" id="rowId2">
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+        </div>
+        <div class="gridRow" id="rowId3">
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+        </div>
+        <div class="gridRow" id="rowId4">
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+            <div class="gridCell"></div>
+        </div>
+        <div id="Writer">
+            <input type="text" id="userInput" maxlength="5" oninput="this.value = this.value.toUpperCase()">
+            <input type="button" value="CHECK" onclick="check()">
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --backgroundBlack: #121213;
+    --tileBlack: #3a3a3c;
+    --tileGray: #818384;
+    --tileYellow: #b59f3b;
+    --tileGreen: #538d4e;
+    --fontWhite: #f8f8f8;
+    --girdCellSize: 75px;
+}
+
+#main {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--fontWhite);
+    background-color: var(--backgroundBlack);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bigText {
+    font-size: 3rem;
+    margin: 0;
+
+}
+
+.gridRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.gridCell {
+    background-color: var(--tileBlack);
+    width: var(--girdCellSize);
+    height: var(--girdCellSize);
+    font-size: 3rem;
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.gridCellWrong {
+    background-color: var(--tileGray) !important;
+}
+
+.gridCellCorrectLetter {
+    background-color: var(--tileYellow) !important;
+}
+
+.gridCellCorrectSpot {
+    background-color: var(--tileGreen) !important;
+}
