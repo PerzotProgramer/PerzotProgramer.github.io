@@ -42,6 +42,7 @@
     height: var(--girdCellSize);
     font-size: 3rem;
     font-weight: 500;
+    border: 2px solid var(--tileGray);
     border-radius: 5px;
     margin: 5px;
 }
@@ -56,4 +57,16 @@
 
 .gridCellCorrectSpot {
     background-color: var(--tileGreen) !important;
+}
+
+input {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.1rem;
+    color: var(--fontWhite);
+    caret-color: var(--tileBlack);
+    background-color: var(--tileBlack);
+    border: 2px solid var(--tileGray);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
 }

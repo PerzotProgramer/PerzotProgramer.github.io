@@ -53,8 +53,14 @@
             <div class="gridCell"></div>
         </div>
         <div id="Writer">
-            <input type="text" id="userInput" maxlength="5" oninput="this.value = this.value.toUpperCase()">
+            <input type="text" id="userInput" maxlength="5" placeholder="Type here"
+                   oninput="this.value = handleInput(this.value)">
+            <br>
             <input type="button" value="CHECK" onclick="check()">
+            <p>Used Letters<br>
+                <span id="usedLetters"></span>
+            </p>
+            <p class="bigText" id="info"></p>
         </div>
     </div>
 </div>
