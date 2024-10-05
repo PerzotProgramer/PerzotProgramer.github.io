@@ -1,23 +1,10 @@
-const words = [
-    "WAGON",
-    "PTAKI",
-    "ALBUM",
-    "ATUTY",
-    "WAWER",
-    "KOLOR",
-    "ROWER",
-    "BANAN",
-    "FILMY",
-    "FANTA",
-    "PEPSI",
-]; // Będzie ich więcej
 const word = setRandomWord();
 let invalidLetters = [];
 let lineNumber = 0;
 let isGameOver = false;
 
 function setRandomWord() {
-    return words[Math.floor(Math.random() * words.length)];
+    return words[Math.floor(Math.random() * words.length)].toUpperCase();
 }
 
 function handleInput(input) { // Mambo jumbo
