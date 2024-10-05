@@ -20,13 +20,15 @@ function setRandomWord() {
     return words[Math.floor(Math.random() * words.length)];
 }
 
-function handleInput(input) {
+function handleInput(input) { // Mambo jumbo
     if (isGameOver) return "";
     input = input.toUpperCase();
-    if (invalidLetters.includes(input[input.length - 1]) || !input[input.length - 1].match(/[A-Za-z]/)) {
-        input = input.slice(0, -1);
-        return input;
-    }
+    let isInvalid = invalidLetters.includes(input[input.length - 1]);
+    let isLetter = input && input[input.length - 1] && input[input.length - 1].match(/[A-Za-z]/); // Kiedy pusty zwraca null
+    if (isInvalid || !isLetter) input = input.slice(0, -1);
+    // Chyba działa :P
+    if ((isLetter || (input === "" && isLetter != null)) && !isInvalid) playAudio('./audio/HardSingleKeyPress.mp3');
+    updateCellsWhenTyping(input);
     return input;
 }
 
@@ -54,21 +56,66 @@ function check() {
             }
         }
         cell.text(userInput[wordIndex]);
+        revealElement(cell, wordIndex * 250);
         wordIndex++;
     });
     updateUsedLetters();
     $("#userInput").val("");
+    checkGameState(hitLetters)
+    lineNumber++;
+}
+
+function checkGameState(hitLetters) {
     if (hitLetters === 5) {
         isGameOver = true;
-        InformationDisplay("YOU WIN!");
+        setTimeout(() => {
+            InformationDisplay("YOU WIN!");
+            playAudio('./audio/HappyWheelsVictory.mp3');
+        }, 1500);
         return;
     }
     if (lineNumber === 4) {
         isGameOver = true;
-        InformationDisplay("YOU LOST!")
-        return;
+        setTimeout(() => {
+            InformationDisplay("YOU LOST!");
+            playAudio('./audio/LosingHornSoundEffect.mp3');
+        }, 1500);
     }
-    lineNumber++;
+}
+
+function updateCellsWhenTyping(input) {
+    let wordIndex = 0;
+    $(`#rowId${lineNumber}`).children().each(function () {
+        const cell = $(this);
+        if (input[wordIndex] === undefined) {
+            cell.text("");
+        } else {
+            cell.text(input[wordIndex]);
+        }
+        wordIndex++;
+    });
+}
+
+function revealElement(element, delay) {
+    $(element).css({
+        opacity: 0,
+        scale: 3
+    });
+    setTimeout(() => {
+
+        $(element).animate({
+            opacity: 1,
+            scale: 1
+        }, {
+            duration: 300
+        });
+        playAudio('./audio/Swoosh.mp3');
+    }, delay);
+}
+
+function playAudio(src) {
+    new Audio(src).play().catch(() => {
+    });
 }
 
 function updateUsedLetters() {
