@@ -95,23 +95,24 @@ a {
 .button:hover {
     background-color: rgba(145, 145, 145, 1);
     transform: scale(105%);
+    cursor: pointer;
 }
 
 @media (orientation: portrait) {
     #title {
         font-size: 1.5rem;
     }
-    
+
     #main {
         width: 90vw;
-    }    
-    
+    }
+
     .button {
         font-size: 0.5rem;
         width: 250px;
     }
-    
-    .bigText, .text{
+
+    .bigText, .text {
         font-size: 1rem;
     }
 }
