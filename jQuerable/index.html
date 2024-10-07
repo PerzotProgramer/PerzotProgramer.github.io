@@ -11,7 +11,7 @@
     <script src="words.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="startTimeCounter()">
 <div id="main">
     <div id="header">
         <p class="bigText">jQuerable</p>
@@ -54,14 +54,15 @@
             <div class="gridCell"></div>
         </div>
         <div id="Writer">
-            <input type="text" id="userInput" maxlength="5" placeholder="Type here" autocomplete="off"
+            <input type="text" id="userInput" maxlength="5" placeholder="Type any polish word" autocomplete="off"
                    oninput="this.value = handleInput(this.value)">
             <br>
-            <input type="button" value="CHECK" onclick="check()">
+            <input type="button" value="CHECK" onclick="checkWord()">
             <p>Used Letters<br>
                 <span id="usedLetters"></span>
             </p>
             <p class="bigText" id="info"></p>
+            <p class="bigText" id="word"></p>
         </div>
     </div>
 </div>

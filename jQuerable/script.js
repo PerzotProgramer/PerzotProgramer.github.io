@@ -1,7 +1,8 @@
 const word = setRandomWord();
-let invalidLetters = [];
+const invalidLetters = [];
 let lineNumber = 0;
 let isGameOver = false;
+let secondsFromStart = 0;
 
 function setRandomWord() {
     return words[Math.floor(Math.random() * words.length)].toUpperCase();
@@ -12,21 +13,30 @@ function handleInput(input) { // Mambo jumbo
     input = input.toUpperCase();
     let isInvalid = invalidLetters.includes(input[input.length - 1]);
     let isLetter = input && input[input.length - 1] && input[input.length - 1].match(/[A-Za-z]/); // Kiedy pusty zwraca null
-    if (isInvalid || !isLetter) input = input.slice(0, -1);
+    if (isInvalid || !isLetter) {
+        input = input.slice(0, -1);
+    }
     // Chyba działa :P
-    if ((isLetter || (input === "" && isLetter != null)) && !isInvalid) playAudio('./audio/HardSingleKeyPress.mp3');
+    if ((isLetter || (input === "" && isLetter != null)) && !isInvalid) {
+        playAudio('./audio/HardSingleKeyPress.mp3');
+        InformationDisplay("");
+    } else {
+        playAudio('./audio/NopeSoundEffect.mp3');
+        InformationDisplay("<span class='textRed'>Invalid letter!</span>");
+    }
     updateCellsWhenTyping(input);
     return input;
 }
 
-function check() {
+function checkWord() {
     if (isGameOver) return;
-    const info = $("#info");
-    const userInput = $("#userInput").val();
+    const usrInpSelector = $("#userInput");
+    const userInput = usrInpSelector.val();
     if (userInput.length < 5) {
-        info.text("Write at least 5 letters!");
+        InformationDisplay("<span class='textRed'>Write at least 5 letters!</span>");
+        playAudio('./audio/NopeSoundEffect.mp3');
         return;
-    } else info.text("");
+    } else InformationDisplay("");
     let wordIndex = 0;
     let hitLetters = 0;
     $(`#rowId${lineNumber}`).children().each(function () {
@@ -47,7 +57,7 @@ function check() {
         wordIndex++;
     });
     updateUsedLetters();
-    $("#userInput").val("");
+    usrInpSelector.val("");
     checkGameState(hitLetters)
     lineNumber++;
 }
@@ -58,6 +68,12 @@ function checkGameState(hitLetters) {
         setTimeout(() => {
             InformationDisplay("YOU WIN!");
             playAudio('./audio/HappyWheelsVictory.mp3');
+            setTimeout(() => {
+                $("#word").text(`It took you 
+                ${secondsFromStart} seconds, 
+                ${lineNumber} tries and 
+                ${invalidLetters.length} invalid letters to guess the word!`);
+            }, 1500);
         }, 1500);
         return;
     }
@@ -66,7 +82,11 @@ function checkGameState(hitLetters) {
         setTimeout(() => {
             InformationDisplay("YOU LOST!");
             playAudio('./audio/LosingHornSoundEffect.mp3');
+            setTimeout(() => {
+                $("#word").text(`The word was: ${word}`);
+            }, 2000);
         }, 1500);
+
     }
 }
 
@@ -111,5 +131,11 @@ function updateUsedLetters() {
 }
 
 function InformationDisplay(info) {
-    $("#info").text(info);
+    $("#info").html(info);
+}
+
+function startTimeCounter() {
+    secondsFromStart++;
+    if (isGameOver) return;
+    setTimeout(startTimeCounter, 1000);
 }

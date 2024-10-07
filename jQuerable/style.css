@@ -7,12 +7,15 @@
     --tileYellow: #b59f3b;
     --tileGreen: #538d4e;
     --fontWhite: #f8f8f8;
-    --girdCellSize: 75px;
+    --girdCellSize: 65px;
+    --standardFontSize: 1.25rem;
+    --doubleFontSize: 2.5rem;
+    overflow: hidden;
 }
 
 #main {
     font-family: "Oswald", sans-serif;
-    font-size: 1.5rem;
+    font-size: var(--standardFontSize);
     text-align: center;
     color: var(--fontWhite);
     background-color: var(--backgroundBlack);
@@ -24,7 +27,7 @@
 }
 
 .bigText {
-    font-size: 3rem;
+    font-size: var(--doubleFontSize);
     margin: 0;
 
 }
@@ -40,7 +43,7 @@
     background-color: var(--tileBlack);
     width: var(--girdCellSize);
     height: var(--girdCellSize);
-    font-size: 3rem;
+    font-size: var(--doubleFontSize);
     font-weight: 500;
     border: 2px solid var(--tileGray);
     border-radius: 5px;
@@ -59,6 +62,12 @@
     background-color: var(--tileGreen) !important;
 }
 
+.textRed {
+    color: #d90000;
+    -webkit-text-stroke-width: 0.015em;
+    -webkit-text-stroke-color: var(--fontWhite);
+}
+
 input {
     font-family: "Oswald", sans-serif;
     letter-spacing: 0.1rem;
@@ -69,4 +78,19 @@ input {
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+    width: 150px;
+    transition: 0.1s;
+}
+
+input:hover:not(#userInput) {
+    border: 2px solid var(--tileYellow);
+    scale: 1.1;
+}
+
+@media (orientation: portrait) or (max-width: 1024px) {
+    :root {
+        --girdCellSize: 50px;
+        --standardFontSize: 1rem;
+        --doubleFontSize: 2rem;
+    }
 }
